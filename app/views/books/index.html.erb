@@ -5,9 +5,9 @@
   <h5>Body</h5>
   <span><%= list.body %></span>
   <span>
-    <%= link_to "Show", book_path(:id) %>
-    <%= link_to "Edit", edit_book_path(:id) %>
-    <%= link_to "Destroy", book_path(:id) %>
+    <%= link_to "Show", book_path(list.id) %>
+    <%= link_to "Edit", edit_book_path(list.id) %>
+    <%= link_to "Destroy", book_path(list.id), method: :delete, "data-confirm" => "Are you sure?" %>
   </span>
 <% end %>
   <h2>New book</h2>

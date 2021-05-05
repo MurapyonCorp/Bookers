@@ -17,6 +17,8 @@ class BooksController < ApplicationController
     if list.save
       flash[:notice] = "Book was successfully created."
       redirect_to book_path(list.id)
+    else
+      render :index
     end
   end
 

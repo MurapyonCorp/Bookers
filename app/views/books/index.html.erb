@@ -11,6 +11,13 @@
   </span>
 <% end %>
   <h2>New book</h2>
+  <% if @list.errors.any? %>
+    <%= @list.errors.count %> prohibited this book from being saved:
+    <% @list.errors.full_messages.each do |message| %>
+      <%= message %>
+    <% end %>
+  <% end %>
+
   <%= form_with model: @list, url:'/books', local:true do |f| %>
     <p>Title</p>
     <%= f.text_field :title %>

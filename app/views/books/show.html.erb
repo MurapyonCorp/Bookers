@@ -5,13 +5,13 @@
 <% end %>
 
 <h5>Title</h5>
-<p><%= @list.title %></p>
+<p><%= @book.title %></p>
 
 <h5>Body</h5>
-<p><%= @list.body %></p>
+<p><%= @book.body %></p>
 
 <span>
-  <%= link_to "Edit", edit_book_path(@list.id) %>
+  <%= link_to "Edit", edit_book_path(@book.id) %>
   <%= link_to "Back", books_path %>
 </span>
 

@@ -22,6 +22,23 @@ body {
   margin: 33px;
 }
 
+th {
+  padding-bottom: 5px;
+}
+
+p, ol ,ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .flash {
   color: green;
 }
@@ -56,4 +73,18 @@ ul {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+}
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
 }

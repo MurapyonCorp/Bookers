@@ -7,14 +7,21 @@
 <% end %>
 
 <%= form_with model: @book, url:"/books/#{@book.id}", local:true do |f| %>
-  <p>Title</p>
-  <%= f.text_field :title %>
-  <p>Body</p>
-  <%= f.text_area :body %>
-  <%= f.submit 'Update Book' %>
+  <div class="field">
+    <label for="book_title">Title</label>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <label for="book_body">Body</label>
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Update Book' %>
+  </div>
 <% end %>
 
 <span>
   <%= link_to "Show", book_path(@book.id) %>
+  <%= "|" %>
   <%= link_to "Back", books_path %>
 </span>
